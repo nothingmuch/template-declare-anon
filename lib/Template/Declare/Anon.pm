@@ -96,6 +96,17 @@ Equivalent to C<process> with no arguments.
 
 =back
 
+=head1 TODO
+
+=over 4
+
+=item Tagsets
+
+Allow exporting of tagsets like L<Template::Declare::Tags> does (C<HTML> etc)
+without needing the other exports of L<Template::Declare::Tags>.
+
+=back
+
 =head1 SEE ALSO
 
 L<Template::Declare>
