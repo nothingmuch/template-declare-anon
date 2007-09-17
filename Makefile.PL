@@ -11,6 +11,7 @@ WriteMakefile(
 	SIGN         => 1,
 	PL_FILES     => { },
 	PREREQ_PM    => {
+		'Template::Declare' => '0.26',
 	},
 );
 
