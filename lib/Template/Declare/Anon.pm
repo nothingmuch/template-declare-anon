@@ -46,66 +46,19 @@ __END__
 
 =head1 NAME
 
-Template::Declare::Anon - Anonymous Template::Declare templates
+Template::Declare::Anon - B<Deprecated> Anonymous Template::Declare templates
 
 =head1 SYNOPSIS
 
-	use Template::Declare::Anon;
+This module is no longer necessary. The following code will just work:
+
 	use Template::Declare::Tags 'HTML';
 
-	my $sub_template = anon_template {
-		row {
-			cell { "Hello, world!" }
+	print html {
+		body {
+			p { "foo" }
 		}
 	};
-
-	my $template = anon_template {
-		link {}
-		table { &$sub_template }
-		img { attr { src => 'cat.gif' } }
-	};
-
-	print $template; # overload is OK
-
-=head1 DESCRIPTION
-
-L<Template::Declare> provides awesome *ML templating facilities. This module
-allows to use this language with anonymous templates, for more ad hoc purposes.
-
-=head1 FUNCTIONS
-
-=over 4
-
-=item anon_template &template
-
-Declare an anonymous template
-
-=item process $template, @args
-
-Process an anonymous template with the arguments @args.
-
-=back
-
-=head1 OVERLOADS
-
-=over 4
-
-=item "" (stringification)
-
-Equivalent to C<process> with no arguments.
-
-=back
-
-=head1 TODO
-
-=over 4
-
-=item Tagsets
-
-Allow exporting of tagsets like L<Template::Declare::Tags> does (C<HTML> etc)
-without needing the other exports of L<Template::Declare::Tags>.
-
-=back
 
 =head1 SEE ALSO
 
