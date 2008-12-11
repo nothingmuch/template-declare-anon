@@ -7,7 +7,7 @@ use warnings;
 
 use base qw/Exporter/;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use Template::Declare ();
 use Template::Declare::Tags ();
